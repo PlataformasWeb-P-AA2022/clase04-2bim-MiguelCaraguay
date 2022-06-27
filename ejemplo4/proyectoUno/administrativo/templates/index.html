@@ -12,6 +12,7 @@
   <thead>
     <tr>
       <th>Estudiante</th>
+      <th>Cedula</th>
       <th>Ver Estudiante</th>
       <th>Editar Estudiante</th>
       <th>Eliminar Estudiante</th>
@@ -21,7 +22,13 @@
 
   {% for e in estudiantes %}
   <tr>
-    <td> {{e}} </td>
+    <td> {{e.nombre}}</br>
+      {{e.apellido}}</br>
+    </td>
+    <td>
+      {{e.cedula}} </br>
+      {{e.get_provincia}} 
+    </td>
     <td> <a href="{% url 'obtener_estudiante' e.id %}">ver</a> </td>
     <td> <a href="{% url 'editar_estudiante' e.id %}">editar</a> </td>
     <td>

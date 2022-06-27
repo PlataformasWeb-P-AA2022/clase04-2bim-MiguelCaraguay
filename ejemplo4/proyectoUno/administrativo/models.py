@@ -11,6 +11,16 @@ class Estudiante(models.Model):
         return "%s %s %s" % (self.nombre, 
                 self.apellido,
                 self.cedula)
+            
+    def get_provincia(self):
+        
+        dato = self.cedula[0:2]
+        if dato == '11':
+            return "Loja"
+        elif dato == '17':
+            return "Pichincha"
+        else:   
+            return "Sin Provincia"
 
 class NumeroTelefonico(models.Model):
     telefono = models.CharField(max_length=100)
