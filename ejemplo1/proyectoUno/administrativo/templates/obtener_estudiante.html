@@ -1,4 +1,10 @@
+{% extends "master.html" %}
 
+{% block title %}
+  Listado de Estudiantes
+{% endblock %}
+
+{% block content %}
 <h3>Datos de estudiante</h3>
 
 <p><b>Nombre:</b>{{estudiante.nombre}}</p>
@@ -7,4 +13,5 @@
 
 <br/>
 [<a href="{% url 'index' %}">inicio</a>]
+{% endblock %}
 
